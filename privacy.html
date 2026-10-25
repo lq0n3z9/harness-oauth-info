@@ -3,18 +3,38 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy - harness-p0-smoke</title></head>
 <body>
 <h1>プライバシーポリシー</h1>
-<p>harness-p0-smoke は、開発者本人が管理する試験用の Google アカウントで、試験用のスプレッドシートと Apps Script を操作するためだけに使います。</p>
+<p>harness-p0-smoke は、開発者本人が管理する試験用の Google アカウント 2 つだけで使う、試験用のツールです。一般の利用者向けのサービスではありません。</p>
+<h2>要求する権限と、その使い方</h2>
 <ul>
-<li>取得するのは、試験用のスプレッドシートと Apps Script プロジェクトへのアクセス権だけです。</li>
-<li>取得したデータを第三者に提供・販売・共有することはありません。</li>
-<li>データは試験の実行と結果の確認のためだけに使い、開発者本人が管理する非公開の場所にだけ保存します。</li>
+<li>権限そのものは、試験の対象の 1 件だけに限られるものではありません。実際にアクセスする先は、開発者本人が所有する試験用の Apps Script プロジェクト 1 つと、試験用のスプレッドシート 1 つだけに限っています。</li>
+<li>Apps Script プロジェクトの管理（作成・更新・デプロイ）、Google Cloud の管理に関する権限: 開発ツール clasp が既定で要求するものです。試験用のプロジェクトのコードの取得・更新と、認証の確認のためのプロジェクトの情報の読取りにだけ使います。</li>
+<li>Google ドライブに関する権限（clasp が既定で要求するもの）: ファイルのメタデータの読取り（drive.metadata.readonly）と、このツールで作成・開いたファイルの操作（drive.file）です。試験用のプロジェクトとスプレッドシートを扱う範囲でだけ使います。</li>
+<li>Google スプレッドシートと、Apps Script のトリガーに関する権限: 試験用のスプレッドシートの読み書きと、試験用のプロジェクトのトリガーの確認にだけ使います。</li>
+<li>メールアドレスと基本的なプロフィール（userinfo.email・userinfo.profile）: ログインしたアカウントが試験用のアカウントであることの確認にだけ使います。</li>
+<li>Gmail などのメールの内容には、アクセスしません。</li>
+</ul>
+<h2>データの保存と処理</h2>
+<ul>
+<li>認証情報: 作成と登録のときに、開発者本人のコンピュータに一時的に保存し、GitHub への登録が済んだらすぐに削除します。継続して保管する場所は、開発者本人の非公開のリポジトリの GitHub Actions の secret です。試験を実行するときには、GitHub Actions の実行環境に渡して使います。認証を作り直すために、OAuth クライアントの設定のファイルだけは、開発者本人のコンピュータに残します。</li>
+<li>試験の記録（試験用のスプレッドシートとプロジェクトの内容の写しと結果）: 同じ非公開のリポジトリ、または開発者本人のコンピュータにだけ保存します。本番のデータや、他の人の個人情報は扱いません。</li>
+<li>データを販売しません。試験の認証・実行・保存に必要な範囲で、Google と GitHub にデータを送り、処理・保存します。それ以外の第三者に、提供・共有することはありません。</li>
 </ul>
 <h1>Privacy Policy</h1>
-<p>harness-p0-smoke is used only by its developer, with test Google accounts they control, to operate a test spreadsheet and Apps Script project.</p>
+<p>harness-p0-smoke is a test tool used only with two test Google accounts controlled by its developer. It is not offered to the public.</p>
+<h2>Permissions requested and how they are used</h2>
 <ul>
-<li>It only requests access to the test spreadsheet and Apps Script project.</li>
-<li>No data is sold, shared with, or provided to third parties.</li>
-<li>Data is used only to run tests and check their results, and is stored only in private locations controlled by the developer.</li>
+<li>The permissions themselves are not limited to a single test target. Actual access is limited to one test Apps Script project and one test spreadsheet owned by the developer.</li>
+<li>Apps Script project management (create, update, deploy) and Google Cloud management: requested by default by the clasp developer tool. They are used only to read and update the code of the test project and to read project information for authentication checks.</li>
+<li>Google Drive (requested by default by clasp): reading file metadata (drive.metadata.readonly) and working with files created or opened by this tool (drive.file). They are used only for the test project and spreadsheet.</li>
+<li>Google Sheets and Apps Script triggers: used only to read and write the test spreadsheet and to check the triggers of the test project.</li>
+<li>Email address and basic profile (userinfo.email, userinfo.profile): used only to confirm that the signed-in account is one of the test accounts.</li>
+<li>The tool does not access Gmail or the contents of email.</li>
+</ul>
+<h2>Storage and processing</h2>
+<ul>
+<li>Credentials: stored temporarily on the developer&#x27;s own computer while they are created and registered, and deleted as soon as they are registered with GitHub. They are kept as GitHub Actions secrets in the developer&#x27;s private repository, and are passed to the GitHub Actions runner when tests run. Only the OAuth client configuration file is kept on the developer&#x27;s computer, so that credentials can be recreated.</li>
+<li>Test records (copies of the test spreadsheet and project contents, and results) are stored only in that private repository or on the developer&#x27;s own computer. No production data or other people&#x27;s personal information is handled.</li>
+<li>No data is sold. Data is sent to, processed and stored by Google and GitHub only as needed to authenticate, run and store the tests. It is not provided to or shared with any other third party.</li>
 </ul>
 <p><a href="index.html">harness-p0-smoke</a></p>
 </body>
